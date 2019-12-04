@@ -1,0 +1,114 @@
+body{
+  background-color: #8cbcd0;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.main_wrapper {
+  display: block;
+  overflow: scroll;
+}
+
+.top_buffer {
+  display: block;
+  width: 100%;
+  height: 1rem;
+}
+
+
+
+.author_text{
+  font-size: 1rem;
+}
+
+
+#profile {
+  max-width: 100%;
+  border-radius: 50%;
+  height: auto;
+  grid-area: picture;
+}
+
+#test_div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4rem;
+}
+
+#quote_box{
+  text-align: center;
+  display: grid;
+  padding: 2rem;
+  margin-top: 6.1rem;
+  margin-bottom: 6.1rem;
+  grid-template-areas:
+    "header"
+    "profile"
+    "quote-content"
+    "button-pad";
+  border-radius: 2rem;
+  font-family: "Georgia", serif;
+  transition: background-color 1s;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 675px) {
+  #quote_box {
+    width: 85%;
+    margin-top: 3rem;
+    grid-template-areas:
+      "header header"
+      "profile quote-content"
+      "button-pad button-pad";
+
+  }
+
+  #test_div {
+    flex-direction: row;
+  }
+
+  #wrapper {
+    width: 50%;
+  }
+}
+
+#title{
+  grid-area: header;
+}
+
+#quote_info {
+  grid-area: quote-content;
+}
+
+
+
+
+#text{
+  font-size: 18px;
+  align-items: center;
+  margin: auto;
+}
+
+#wrapper{
+  display: grid;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+}
+
+.buttons{
+  display: flex;
+  grid-area: button-pad;
+  margin: auto;
+}
+
+.buttons button{
+  height: 3rem;
+  width: 7rem;
+  margin: 1rem;
+  border-radius: 2rem;
+}
